@@ -1,0 +1,290 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "https://avatars.githubusercontent.com/u/20044541?v=4",
+    "size": 80,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0.5)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Christiaan Verhoef",
+    "headline": "Experienced Scrum Master & Agile Coach",
+    "email": "christiaan_gerardo@hotmail.com",
+    "phone": "+31630184743",
+    "location": "Baarn, Netherlands",
+    "website": {
+      "url": "https://tonomy.foundation",
+      "label": "Portfolio"
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Professional Summary",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Certified Scrum Master and Agile Coach with 10+ years guiding teams to deliver value through iterative and collaborative practices. Experienced facilitator of ceremonies, sprint planning, retrospectives, and continuous improvement. Skilled in aligning cross-functional teams around shared outcomes, removing impediments, and improving process flows. Combines systems thinking with team empowerment to create resilient, high-performing teams.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Key Competencies",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "profile1",
+          "hidden": false,
+          "icon": "",
+          "name": "Agile Facilitation",
+          "proficiency": "Lead sprint planning, stand-ups, reviews, and retrospectives to ensure team alignment and delivery cadence."
+        },
+        {
+          "id": "profile2",
+          "hidden": false,
+          "icon": "",
+          "name": "Team Coaching",
+          "proficiency": "Coach teams on Agile principles, continuous improvement, and self-organization."
+        },
+        {
+          "id": "profile3",
+          "hidden": false,
+          "icon": "",
+          "name": "Stakeholder Engagement",
+          "proficiency": "Align product owners, developers, and stakeholders around shared goals and measurable outcomes."
+        },
+        {
+          "id": "profile4",
+          "hidden": false,
+          "icon": "",
+          "name": "Process Optimization",
+          "proficiency": "Identify and remove impediments, streamline workflows, and embed continuous improvement."
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "sm1",
+          "hidden": false,
+          "company": "Windesheim University of Applied Sciences",
+          "position": "Agile Project Manager & Scrum Facilitator",
+          "location": "Zwolle, Netherlands",
+          "period": "2022 – Present",
+          "website": {
+            "url": "https://www.windesheim.nl/onderzoek/lectoraten/supply-chain-finance",
+            "label": ""
+          },
+          "description": "<ul><li>Facilitated cross-functional agile teams to deliver iterative learning modules and simulations.</li><li>Led sprint planning, backlog refinement, and retrospectives to remove impediments and accelerate delivery.</li><li>Coached students and educators in Scrum and Agile practices, increasing delivery predictability and team ownership.</li><li>Introduced feedback loops and workflow improvements to streamline project execution across departments.</li></ul>"
+        },
+        {
+          "id": "sm2",
+          "hidden": false,
+          "company": "Tonomy Foundation",
+          "position": "Agile Coach & Board Member",
+          "location": "Amsterdam & Remote",
+          "period": "2021 – Present",
+          "website": {
+            "url": "https://tonomy.foundation",
+            "label": ""
+          },
+          "description": "<ul><li>Coached internal teams on collaborative planning, adaptive delivery, and incremental value creation.</li><li>Facilitated agile ceremonies with distributed contributors to align outcomes with strategic goals.</li><li>Designed frameworks for iterative development of governance tooling, improving team coherence and cycle time.</li></ul>"
+        },
+        {
+          "id": "sm3",
+          "hidden": false,
+          "company": "Aeres Hogeschool Dronten",
+          "position": "Agile Lab Manager",
+          "location": "Dronten, Netherlands",
+          "period": "2021 – 2022",
+          "website": {
+            "url": "https://www.aereshogeschool.nl",
+            "label": ""
+          },
+          "description": "<ul><li>Introduced agile methods into curriculum design and lab operations.</li><li>Facilitated team sprints combining multiple courses into a cohesive project cycle using SafeScrum.</li><li>Coached student teams on iterative delivery and collaborative problem solving.</li></ul>"
+        },
+        {
+          "id": "sm4",
+          "hidden": false,
+          "company": "ROC Midden Nederland",
+          "position": "Freelance Agile Educator",
+          "location": "Utrecht, Netherlands",
+          "period": "2018 – 2020",
+          "website": {
+            "url": "https://www.rocmn.nl",
+            "label": ""
+          },
+          "description": "<ul><li>Delivered agile simulations and sprint-based learning frameworks to student teams.</li><li>Created systems thinking exercises that reinforced iterative problem solving and team adaptation.</li></ul>"
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "edu1",
+          "hidden": false,
+          "school": "Hogeschool van Amsterdam",
+          "degree": "Bachelor of Business Administration",
+          "area": "Business IT & Management",
+          "grade": "8.7",
+          "location": "Amsterdam, Netherlands",
+          "period": "2010 – 2014",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Selected Projects",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "proj1",
+          "hidden": false,
+          "name": "Value Chain Hackers AI Lab",
+          "period": "2024 – Present",
+          "website": {
+            "url": "https://valuechainhackers.xyz",
+            "label": ""
+          },
+          "description": "Led agile teams to design and deploy AI-powered tools using iterative cycles and cross-functional collaboration."
+        },
+        {
+          "id": "proj2",
+          "hidden": false,
+          "name": "Agile Supply Chain Simulations",
+          "period": "2020 – 2023",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "Designed and facilitated Agile simulation modules that taught iterative planning and feedback loops to learners."
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "skill1",
+          "hidden": false,
+          "icon": "",
+          "name": "Scrum & Agile Frameworks",
+          "proficiency": "Sprint planning, reviews, retrospectives, backlog prioritization."
+        },
+        {
+          "id": "skill2",
+          "hidden": false,
+          "icon": "",
+          "name": "Facilitation",
+          "proficiency": "Team ceremonies, stakeholder alignment, workshop design."
+        },
+        {
+          "id": "skill3",
+          "hidden": false,
+          "icon": "",
+          "name": "Coaching & Mentoring",
+          "proficiency": "Agile coaching, team development, conflict resolution."
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "lang1",
+          "hidden": false,
+          "language": "Dutch",
+          "fluency": "Native Speaker",
+          "level": 5
+        },
+        {
+          "id": "lang2",
+          "hidden": false,
+          "language": "English",
+          "fluency": "B2 - Near Native Speaker",
+          "level": 5
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "cert1",
+          "hidden": false,
+          "title": "Certified Scrum Master",
+          "issuer": "",
+          "date": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "cert2",
+          "hidden": false,
+          "title": "Prince 2 Practitioner",
+          "issuer": "",
+          "date": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": []
+}

@@ -1,0 +1,440 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "https://avatars.githubusercontent.com/u/20044541?v=4",
+    "size": 80,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0.5)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Christiaan Verhoef",
+    "headline": "Systems Architect | Innovation Lab Builder | AI & Sustainability Strategist",
+    "email": "christiaan_gerardo@hotmail.com",
+    "phone": "+31630184743",
+    "location": "Baarn, Netherlands",
+    "website": {
+      "url": "https://tonomy.foundation",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Summary",
+    "columns": 1,
+    "hidden": false,
+    "content": "Systems thinker and innovation architect operating at the intersection of AI, sustainability, education, and blockchain. Founder of Value Chain Hackers and Co-Founder of Tonomy Foundation. Designs labs, simulations, and AI infrastructures that translate complex systems into actionable practice. Combines entrepreneurial execution with academic research environments. Experienced in securing funding, building cross-institutional collaborations, and deploying self-hosted AI stacks for research and experimentation."
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "experience": {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "1",
+          "hidden": false,
+          "company": "Tonomy Foundation",
+          "position": "Co-Founder & Board Member",
+          "location": "Amsterdam & Remote",
+          "period": "2021 – Present",
+          "website": {
+            "url": "https://tonomy.foundation",
+            "label": ""
+          },
+          "description": "Co-founded decentralized identity and governance foundation. Led strategy, ecosystem positioning, whitepaper development, community growth, and product validation. Oversaw marketing, onboarding, HR coordination, and governance alignment. Designed Pangea Vault identity product and positioned foundation for MiCA compliance."
+        },
+        {
+          "id": "2",
+          "hidden": false,
+          "company": "Windesheim University of Applied Sciences",
+          "position": "Project Manager – Supply Chain Finance Lectoraat",
+          "location": "Zwolle, Netherlands",
+          "period": "2020 – Present",
+          "website": {
+            "url": "https://www.windesheim.nl/onderzoek/lectoraten/supply-chain-finance",
+            "label": ""
+          },
+          "description": "Leads applied innovation projects connecting logistics, finance, AI, and sustainability. Founded Spark! Living Lab and Value Chain Hackers. Designed blockchain-based supply chain simulations and AI compliance tooling. Built and self-funded AI sandbox (OpenWebUI, Supabase, n8n, Flowise). Facilitates interdisciplinary collaboration between students, researchers, and industry partners."
+        },
+        {
+          "id": "3",
+          "hidden": false,
+          "company": "Viridis Green-Tech AG",
+          "position": "Innovation Architect",
+          "location": "Munich, Germany (Remote)",
+          "period": "2024 – Present",
+          "website": {
+            "url": "https://viridis.info/",
+            "label": ""
+          },
+          "description": "Architecting blockchain-powered sustainability ecosystems. Developed modular traceability frameworks. Co-authored grant proposals and funding strategies. Aligns technical architecture with commercial and compliance strategy."
+        },
+        {
+          "id": "4",
+          "hidden": false,
+          "company": "COTIT",
+          "position": "Business Innovator",
+          "location": "Almere, Netherlands",
+          "period": "2024",
+          "website": {
+            "url": "https://cotit.eu/",
+            "label": ""
+          },
+          "description": "Restructured SaaS sales cycle and operational processes for modular logistics platform. Improved business model clarity and internal workflow alignment."
+        },
+        {
+          "id": "5",
+          "hidden": false,
+          "company": "Aeres Hogeschool Dronten",
+          "position": "Lab Manager",
+          "location": "Dronten, Netherlands",
+          "period": "2021 – 2022",
+          "website": {
+            "url": "https://www.aereshogeschool.nl/",
+            "label": ""
+          },
+          "description": "Designed and implemented agile innovation lab. Integrated eight courses into single sprint-based program. Incubated startups including Vales Farming. Applied SafeScrum and project-based learning frameworks."
+        },
+        {
+          "id": "6",
+          "hidden": false,
+          "company": "KONGSBERG",
+          "position": "Field Service Engineer & Data Quality Consultant",
+          "location": "Kristiansand, Norway",
+          "period": "2012",
+          "website": {
+            "url": "https://kongsbergdigital.com",
+            "label": ""
+          },
+          "description": "Delivered BI implementations for BP and Statoil across international sites. Installed hardware, configured databases, managed data quality standards, and trained operational staff. Oversaw data integrity between partner systems."
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "e1",
+          "hidden": false,
+          "school": "Hogeschool van Amsterdam",
+          "degree": "Bachelor of Business Administration",
+          "area": "Business IT & Management",
+          "grade": "8.7",
+          "location": "",
+          "period": "2010 – 2014",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "Thesis on simulation-based learning at Kongsberg."
+        },
+        {
+          "id": "e2",
+          "hidden": false,
+          "school": "Hogeschool van Amsterdam",
+          "degree": "Technical Informatics",
+          "area": "",
+          "grade": "",
+          "location": "",
+          "period": "2006 – 2007",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "p1",
+          "hidden": false,
+          "name": "Value Chain Hackers",
+          "period": "2024 – Present",
+          "website": {
+            "url": "https://valuechainhackers.xyz",
+            "label": ""
+          },
+          "description": "AI-powered supply chain mapping and compliance initiative addressing CSRD, CSDDD, and EUDR. Designed sustainability intelligence tools and workshops."
+        },
+        {
+          "id": "p2",
+          "hidden": false,
+          "name": "Spark! Living Lab",
+          "period": "2020 – Present",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "Blockchain and logistics simulation lab. Developed BlockBeer Game to demonstrate bullwhip effect and distributed trust models."
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "s1",
+          "hidden": false,
+          "icon": "",
+          "name": "Systems Thinking",
+          "proficiency": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "s2",
+          "hidden": false,
+          "icon": "",
+          "name": "AI & Open Infrastructure",
+          "proficiency": "",
+          "level": 4,
+          "keywords": []
+        },
+        {
+          "id": "s3",
+          "hidden": false,
+          "icon": "",
+          "name": "Agile Facilitation",
+          "proficiency": "",
+          "level": 5,
+          "keywords": []
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "l1",
+          "hidden": false,
+          "language": "Dutch",
+          "fluency": "Native Speaker",
+          "level": 5
+        },
+        {
+          "id": "l2",
+          "hidden": false,
+          "language": "English",
+          "fluency": "Bilingual",
+          "level": 5
+        },
+        {
+          "id": "l3",
+          "hidden": false,
+          "language": "German",
+          "fluency": "Conversational",
+          "level": 3
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "i1",
+          "hidden": false,
+          "icon": "",
+          "name": "Dungeons and Dragons",
+          "keywords": []
+        },
+        {
+          "id": "i2",
+          "hidden": false,
+          "icon": "",
+          "name": "Simulation Design",
+          "keywords": []
+        }
+      ]
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "c1",
+          "hidden": false,
+          "title": "Scrum Master",
+          "issuer": "",
+          "date": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "c2",
+          "hidden": false,
+          "title": "Oracle 11g Essentials",
+          "issuer": "",
+          "date": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": [
+    {
+      "title": "Expierance 2",
+      "columns": 1,
+      "hidden": false,
+      "id": "019cb47d-e3d1-747f-a37e-381383ca89f0",
+      "type": "experience",
+      "items": []
+    },
+    {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "id": "019cb47e-571a-748b-9488-3d6b84a50a57",
+      "type": "experience",
+      "items": []
+    }
+  ],
+  "metadata": {
+    "template": "pikachu",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "profiles",
+            "summary",
+            "experience"
+          ],
+          "sidebar": [
+            "skills",
+            "languages",
+            "publications",
+            "interests"
+          ]
+        },
+        {
+          "fullWidth": false,
+          "main": [
+            "019cb47d-e3d1-747f-a37e-381383ca89f0"
+          ],
+          "sidebar": []
+        },
+        {
+          "fullWidth": false,
+          "main": [
+            "education",
+            "references"
+          ],
+          "sidebar": [
+            "certifications",
+            "awards"
+          ]
+        },
+        {
+          "fullWidth": false,
+          "main": [
+            "volunteer",
+            "projects",
+            "019cb47e-571a-748b-9488-3d6b84a50a57"
+          ],
+          "sidebar": []
+        }
+      ]
+    },
+    "css": {
+      "enabled": false,
+      "value": ""
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 14,
+      "marginY": 12,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(220, 38, 38, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "500"
+        ],
+        "fontSize": 10,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 14,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": ""
+  }
+}

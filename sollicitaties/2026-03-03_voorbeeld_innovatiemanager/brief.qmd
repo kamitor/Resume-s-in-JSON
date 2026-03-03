@@ -1,0 +1,49 @@
+---
+format:
+  pdf:
+    template: ../../_stijl/brief-modern.tex
+    pdf-engine: xelatex
+    output-file: "brief.pdf"
+
+# ---- Vacature gegevens ----
+bedrijf: "Voorbeeld Hogeschool"
+afdeling: "P&O Afdeling"
+ter_attentie: "dhr. R. de Vries"
+bedrijf_adres: "Voorbeeldlaan 10"
+bedrijf_postcode: "3500 AB"
+bedrijf_stad: "Utrecht"
+
+functie: "Innovation Manager"
+referentie: "VAC-2026-042"
+datum: "3 maart 2026"
+aanhef: "Geachte heer De Vries,"
+
+# Meest relevante certificeringen voor deze functie
+certificeringen:
+  - "Scrum Master"
+  - "Prince 2"
+  - "Train the Trainer (Blockchain)"
+---
+
+Met veel interesse reageer ik op uw vacature voor de functie van **Innovation Manager**
+(ref: VAC-2026-042). Als iemand die de afgelopen jaren meerdere innovatielabs heeft
+opgezet — van de Spark! Living Lab bij Windesheim tot Value Chain Hackers — herken ik
+direct de uitdaging en de kans die u beschrijft.
+
+Bij **Windesheim University** heb ik als projectmanager bij het Supply Chain Finance
+lectoraat een lab gebouwd waarin studenten en onderzoekers hands-on werken met AI,
+simulaties en open infrastructuur. Ik heb daarvoor zelf een self-hosted AI-omgeving
+opgezet (OpenWebUI, Flowise, n8n, Supabase), cursussen omgebouwd naar agile
+projectsprints en cross-disciplinaire samenwerking gefaciliteerd tussen lectoraten die
+normaal niet met elkaar in contact komen. Naast Windesheim heb ik bij Aeres Hogeschool
+een vergelijkbaar lab opgezet en studentprojecten begeleid die uitgroeiden tot
+zelfstandige startups met externe financiering.
+
+Uw hogeschool zoekt iemand die verbindt, bouwt én verankert. Dat is precies hoe ik
+werk: ik start met een concreet prototype, trek mensen mee door ze iets te laten
+*doen*, en zorg vervolgens voor de structuur die het duurzaam maakt. Met mijn
+achtergrond in agile facilitation, subsidietrajecten en stakeholderalignment denk ik
+snel waarde te kunnen toevoegen aan uw innovatieprogramma.
+
+Ik zie graag de mogelijkheid om dit persoonlijk toe te lichten. Ik ben beschikbaar voor
+een kennismakingsgesprek en reageer graag op vragen.

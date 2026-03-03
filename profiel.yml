@@ -1,0 +1,23 @@
+# ============================================================
+# Persoonlijk profiel van Christiaan Verhoef
+# Wordt automatisch in alle brieven geladen via _quarto.yml
+# ============================================================
+
+naam: "Christiaan Verhoef"
+headline: "Builder of Labs and Learning Systems that Turn Ideas into Action"
+adres: ""
+postcode: ""
+stad: "Baarn"
+land: "Nederland"
+telefoon: "+31 6 30 18 47 43"
+email: "christiaan_gerardo@hotmail.com"
+website_url: "tonomy.foundation"
+
+# Certificeringen — verschijnen als badges in de brief header
+# Verwijder items die je voor een bepaalde functie minder relevant vindt
+certificeringen:
+  - "Scrum Master"
+  - "Prince 2"
+  - "Train the Trainer (Blockchain)"
+  - "Oracle 11g"
+  - "SOA Concepts (Oracle)"

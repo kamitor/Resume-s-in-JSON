@@ -1,0 +1,122 @@
+\documentclass[a4paper, 11pt]{article}
+
+% Encoding en fonts (xelatex)
+\usepackage{fontspec}
+
+% Pagina-indeling — smallere marges voor meer schrijfruimte
+\usepackage[a4paper, top=1.8cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+
+% Links en kleuren
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+% Typografie
+\usepackage{parskip}
+\usepackage{microtype}
+
+% Icoontjes
+\usepackage{fontawesome5}
+
+% Geen paginanummers
+\pagestyle{empty}
+
+% Kleur definitie — verander hier de accentkleur
+\definecolor{accent}{HTML}{1A5276}
+\definecolor{accentlight}{HTML}{D6EAF8}
+\definecolor{grijs}{HTML}{555555}
+
+% Alineaafstand (compact genoeg voor één pagina)
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+
+% Geen afbreekstreepjes
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% Pandoc lijsten fix
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% ================================================================
+% HEADER
+% ================================================================
+{\color{accent}\rule{\linewidth}{2pt}}
+
+\vspace{0.3em}
+
+{\LARGE\bfseries\color{accent} $naam$}
+
+\vspace{0.1em}
+
+{\small\color{grijs}\itshape $headline$}
+
+\vspace{0.3em}
+
+{\small%
+$if(telefoon)$\faPhone*~\href{tel:$telefoon$}{$telefoon$}\quad\textcolor{accent}{|}~$endif$%
+\faEnvelope~\href{mailto:$email$}{$email$}%
+$if(website_url)$\quad\textcolor{accent}{|}~\faGlobe~\href{https://$website_url$}{$website_url$}$endif$%
+$if(stad)$\quad\textcolor{accent}{|}~\faMapMarker~$stad$$endif$%
+}
+
+$if(certificeringen)$
+\vspace{0.25em}
+
+{\footnotesize%
+$for(certificeringen)$\colorbox{accentlight}{\color{accent}\faCertificate~~$it$}~~$endfor$%
+}
+$endif$
+
+\vspace{0.25em}
+
+{\color{accent}\rule{\linewidth}{0.5pt}}
+
+% ================================================================
+% DATUM (rechts uitgelijnd)
+% ================================================================
+\vspace{0.35cm}
+
+\begin{flushright}
+$if(stad)$$stad$, $endif$$datum$
+\end{flushright}
+
+\vspace{0.35cm}
+
+% ================================================================
+% GEADRESSEERDE
+% ================================================================
+\textbf{$bedrijf$}\\
+$if(afdeling)$$afdeling$\\$endif$%
+$if(ter_attentie)$T.a.v. $ter_attentie$\\$endif$%
+$if(bedrijf_adres)$$bedrijf_adres$\\$endif$%
+$if(bedrijf_postcode)$$bedrijf_postcode$ $endif$$if(bedrijf_stad)$$bedrijf_stad$$endif$
+
+\vspace{0.6cm}
+
+% ================================================================
+% ONDERWERP
+% ================================================================
+\textbf{Betreft: Sollicitatie $functie$$if(referentie)$ \textnormal{(ref: $referentie$)}$endif$}
+
+\vspace{0.6cm}
+
+% ================================================================
+% BRIEF INHOUD
+% ================================================================
+$aanhef$
+
+\vspace{0.2em}
+
+$body$
+
+\vspace{0.5cm}
+
+\noindent Met vriendelijke groet,
+
+\vspace{1.5cm}
+
+\noindent\textbf{$naam$}
+
+\end{document}

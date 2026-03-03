@@ -1,0 +1,88 @@
+\documentclass[a4paper, 11pt]{article}
+
+% Encoding en fonts (xelatex)
+\usepackage{fontspec}
+
+% Pagina-indeling (DIN 5008 stijl marges)
+\usepackage[a4paper, top=2.7cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+% Links
+\usepackage[hidelinks]{hyperref}
+
+% Typografie
+\usepackage{parskip}
+\usepackage{microtype}
+
+% Geen paginanummers
+\pagestyle{empty}
+
+% Instellingen
+\setlength{\parskip}{0.7em}
+\setlength{\parindent}{0pt}
+
+% Pandoc lijsten fix
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% ================================================================
+% AFZENDER (rechts bovenaan)
+% ================================================================
+\begin{flushright}
+\textbf{$naam$}\\
+$if(adres)$$adres$\\$endif$%
+$if(postcode)$$postcode$ $endif$$stad$$if(land)$, $land$$endif$\\
+\vspace{0.2em}
+$if(telefoon)$$telefoon$\\$endif$%
+\href{mailto:$email$}{$email$}\\
+$if(website_url)$\href{https://$website_url$}{$website_url$}$endif$
+\end{flushright}
+
+\vspace{0.5cm}
+
+% ================================================================
+% DATUM
+% ================================================================
+\begin{flushright}
+$if(stad)$$stad$$endif$, $datum$
+\end{flushright}
+
+\vspace{1cm}
+
+% ================================================================
+% GEADRESSEERDE
+% ================================================================
+\textbf{$bedrijf$}\\
+$if(afdeling)$$afdeling$\\$endif$%
+$if(ter_attentie)$T.a.v. $ter_attentie$\\$endif$%
+$if(bedrijf_adres)$$bedrijf_adres$\\$endif$%
+$if(bedrijf_postcode)$$bedrijf_postcode$ $endif$$if(bedrijf_stad)$$bedrijf_stad$$endif$
+
+\vspace{1cm}
+
+% ================================================================
+% ONDERWERP
+% ================================================================
+\textbf{Betreft: Sollicitatie $functie$$if(referentie)$ \textnormal{(ref: $referentie$)}$endif$}
+
+\vspace{1cm}
+
+% ================================================================
+% BRIEF INHOUD
+% ================================================================
+$aanhef$
+
+\vspace{0.3em}
+
+$body$
+
+\vspace{1.5cm}
+
+Met vriendelijke groet,
+
+\vspace{2.5cm}
+
+\textbf{$naam$}
+
+\end{document}

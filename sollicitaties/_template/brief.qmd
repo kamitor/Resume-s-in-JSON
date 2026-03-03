@@ -1,0 +1,42 @@
+---
+# ============================================================
+# TEMPLATE — kopieer deze map en pas aan voor elke sollicitatie
+# ============================================================
+
+format:
+  pdf:
+    # Kies je template:
+    #   brief-modern.tex   → header met icoontjes en certificeringen
+    #   brief-klassiek.tex → traditionele zakelijke brief
+    template: ../../_stijl/brief-modern.tex
+    pdf-engine: xelatex
+    output-file: "brief.pdf"
+
+# ---- Vacature gegevens (invullen!) ----
+bedrijf: "Bedrijfsnaam B.V."
+afdeling: ""               # bijv. "HR Afdeling" — leeg laten als onbekend
+ter_attentie: ""           # bijv. "dhr. de Vries" — leeg laten als onbekend
+bedrijf_adres: "Straatnaam 1"
+bedrijf_postcode: "1234 AB"
+bedrijf_stad: "Stad"
+
+functie: "Functietitel"
+referentie: ""             # vacaturenummer indien opgegeven
+datum: "3 maart 2026"
+aanhef: "Geachte heer/mevrouw,"
+
+# ---- Optioneel: overschrijf certificeringen uit profiel.yml ----
+# Verwijder of voeg toe op basis van relevantie voor deze functie
+# certificeringen:
+#   - "Scrum Master"
+#   - "Prince 2"
+---
+
+Hiermee reageer ik op uw vacature voor de functie van **[functie]** bij **[bedrijf]**.
+[Eerste zin: waarom jij, waarom nu, waarom dit bedrijf — maak het direct concreet.]
+
+[Tweede alinea: wat breng jij mee dat relevant is voor deze functie. Noem twee of drie concrete ervaringen of resultaten die aansluiten bij de vacature.]
+
+[Derde alinea: verbind jouw aanpak of visie aan het bedrijf of de uitdaging die zij voor ogen hebben. Laat zien dat je het bedrijf begrijpt.]
+
+Ik zie graag de mogelijkheid om dit persoonlijk toe te lichten en ben beschikbaar voor een gesprek op een moment dat u schikt.

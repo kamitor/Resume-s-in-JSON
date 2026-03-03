@@ -1,0 +1,401 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "https://avatars.githubusercontent.com/u/20044541?v=4",
+    "size": 80,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0.5)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Christiaan Verhoef",
+    "headline": "Scrum Master | Agile Coach | Facilitator of High-Trust Delivery",
+    "email": "christiaan_gerardo@hotmail.com",
+    "phone": "+31630184743",
+    "location": "Baarn, Netherlands",
+    "website": {
+      "url": "https://tonomy.foundation",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Summary",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Scrum Master and agile facilitator who builds clarity, cadence, and psychological safety in complex environments. I help teams deliver predictable value by tightening feedback loops, making work visible, and removing impediments. Strong in facilitation, coaching, and stakeholder alignment across education, tech, and innovation programs.</p><p><strong>Key Competencies</strong><br>Scrum events facilitation • Team coaching and conflict handling • Backlog hygiene with Product Owners • Flow, WIP and impediment removal • Continuous improvement (retro systems) • Cross-team alignment • Workshop design • Learning-by-doing change adoption</p><p><strong>Selected impact</strong></p><ul><li><p>Built and led multiple innovation programs where teams delivered in sprint cycles</p></li><li><p>Introduced agile learning and SafeScrum structures across multi-course initiatives</p></li><li><p>Facilitated stakeholders across silos to ship usable tooling and training formats</p></li><li><p>Built and operated self-hosted experimentation environments to enable fast iteration</p></li></ul>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "experience": {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "kacu7f5zia1e8fcy8kzmdd9x",
+          "hidden": false,
+          "company": "Windesheim University of Applied Sciences",
+          "position": "Scrum Master / Agile Facilitator (Project Manager – Supply Chain Finance Lectoraat)",
+          "location": "Zwolle, Netherlands",
+          "period": "2022 – Present",
+          "website": {
+            "url": "https://www.windesheim.nl/onderzoek/lectoraten/supply-chain-finance",
+            "label": ""
+          },
+          "description": "<ul><li><p>Facilitated sprint rituals and working agreements for cross-functional teams (students, researchers, technical contributors).</p></li><li><p>Coached teams to work with smaller slices, clear Definition of Done, and short feedback cycles to increase delivery cadence.</p></li><li><p>Supported Product Owner-style prioritization: clarified goals, translated ambiguity into actionable backlog items, kept scope realistic.</p></li><li><p>Removed impediments by redesigning workflows, improving collaboration patterns, and making dependencies visible across departments.</p></li><li><p>Designed and ran simulation-based learning formats (Beer Game redesign, BlockBeer, decision-making simulations) as agile training instruments.</p></li><li><p>Built and maintained an experimentation stack (Flowise, OpenWebUI, Supabase, n8n) to enable rapid prototyping and iteration.</p></li></ul>"
+        },
+        {
+          "id": "sl4mqzk4y35j82nr71aqc6pc",
+          "hidden": false,
+          "company": "Aeres Hogeschool Dronten",
+          "position": "Agile Lab Manager / Scrum Facilitator",
+          "location": "Dronten, Netherlands",
+          "period": "2021 – 2022",
+          "website": {
+            "url": "https://www.aereshogeschool.nl/over-aeres-hogeschool/locaties/dronten",
+            "label": ""
+          },
+          "description": "<ul><li><p>Implemented SafeScrum-based sprint cycles across an innovation track combining eight courses into one delivery rhythm.</p></li><li><p>Facilitated sprint planning, reviews and retrospectives; coached student teams on collaboration, ownership, and incremental delivery.</p></li><li><p>Supported incubation and stakeholder alignment for student-led initiatives moving toward real startup execution.</p></li></ul>"
+        },
+        {
+          "id": "t7uu528ve4u0cpieubitfnlv",
+          "hidden": false,
+          "company": "ROC Midden Nederland",
+          "position": "Freelance Educator – Agile Learning & Digital Projects",
+          "location": "Utrecht, Netherlands",
+          "period": "2018 – 2020",
+          "website": {
+            "url": "https://www.rocmn.nl",
+            "label": ""
+          },
+          "description": "<ul><li><p>Designed and facilitated sprint-based learning programs that simulate real product teams (roles, cadence, demos, constraints).</p></li><li><p>Built practical agile habits: making work visible, tightening feedback loops, and turning reflection into concrete improvements.</p></li></ul>"
+        },
+        {
+          "id": "cb4asv37kdk1t4622thw0pb9",
+          "hidden": false,
+          "company": "The Fork",
+          "position": "Head Trainer & Innovator (Agile Training & Delivery)",
+          "location": "Amsterdam, Netherlands",
+          "period": "2018 – 2020",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Led training programs where teams learned by delivering working prototypes in short cycles.</p></li><li><p>Mentored teams and structured collaboration to move from exploration to shippable outputs.</p></li></ul>"
+        },
+        {
+          "id": "p2rmvdrf1ve1wf9jg12hg601",
+          "hidden": false,
+          "company": "Tonomy Foundation",
+          "position": "Co-Founder & Board Member (Agile Delivery / Governance Tooling)",
+          "location": "Amsterdam & Remote",
+          "period": "2021 – Present",
+          "website": {
+            "url": "https://tonomy.foundation",
+            "label": ""
+          },
+          "description": "<ul><li><p>Enabled distributed collaboration by structuring delivery into workable increments and aligning contributors around outcomes.</p></li><li><p>Supported product integrity and long-term direction as board member; facilitated decision-making and alignment when ambiguity was high.</p></li></ul>"
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "z1ootfrgrf9azkhoh2bd6qnv",
+          "hidden": false,
+          "school": "Hogeschool van Amsterdam",
+          "degree": "Bachelor of Business Administration",
+          "area": "Business IT & Management",
+          "grade": "8.7",
+          "location": "",
+          "period": "2010 – 2014",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Thesis focus: simulation-based learning and training methodology (Kongsberg).</p>"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "whosis3xem5zl7mdigkqfa2o",
+          "hidden": false,
+          "name": "Beer Game Redesign",
+          "period": "2020",
+          "website": {
+            "url": "https://demonstrator.valuechainhackers.xyz",
+            "label": ""
+          },
+          "description": "<p>Redesigned a complex systems simulation into a modern, sprint-friendly teaching format that builds agile habits through live feedback loops.</p>"
+        },
+        {
+          "id": "h7aa43udsjch6tf02hs0va7a",
+          "hidden": false,
+          "name": "Value Chain Hackers",
+          "period": "Jan 2024 – Present",
+          "website": {
+            "url": "https://valuechainhackers.xyz",
+            "label": ""
+          },
+          "description": "<p>Built a student-facing innovation lab and tooling ecosystem; facilitated collaboration and iterative delivery across research, education, and technical prototyping.</p>"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "nbvop4nq7hl17f01nz5265d2",
+          "hidden": false,
+          "icon": "",
+          "name": "Agile Coaching & Facilitation",
+          "proficiency": "Facilitates Scrum events, builds team agreements, removes impediments, and turns retros into measurable improvement.",
+          "level": 5,
+          "keywords": ["Scrum", "Agile coaching", "Facilitation", "Sprint planning", "Retrospectives", "Continuous improvement", "SafeScrum"]
+        },
+        {
+          "id": "mkf7e8ks0f1p1y7chdy9l71d",
+          "hidden": false,
+          "icon": "",
+          "name": "Systems Thinking",
+          "proficiency": "Maps dependencies, clarifies constraints, and improves flow across people, process, and tooling.",
+          "level": 5,
+          "keywords": ["Systems thinking", "Workflow", "Impediments", "Process design", "Complexity", "Organizational interfaces"]
+        },
+        {
+          "id": "tdw1ecf523i8tlrbpj0pp0gj",
+          "hidden": false,
+          "icon": "",
+          "name": "Stakeholder Alignment & Facilitation",
+          "proficiency": "Aligns product, delivery, and stakeholders around outcomes; navigates conflict and ambiguity without losing momentum.",
+          "level": 4,
+          "keywords": ["Stakeholders", "Alignment", "Workshops", "Consensus", "Change facilitation"]
+        },
+        {
+          "id": "skwp8prusx3z5t3kojqn2rty",
+          "hidden": false,
+          "icon": "",
+          "name": "Workshop Design & Delivery",
+          "proficiency": "Designs hands-on workshops and simulations that create shared language and accelerate team adoption.",
+          "level": 5,
+          "keywords": ["Workshop design", "Serious games", "Learning by doing", "Training", "Facilitation"]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "akob7g40090cxq1bifnmnmyb",
+          "hidden": false,
+          "language": "Dutch",
+          "fluency": "Native Speaker",
+          "level": 5
+        },
+        {
+          "id": "z8blsfztg3s8wyrbati9z5ht",
+          "hidden": false,
+          "language": "English",
+          "fluency": "B2 - Near Native Speaker",
+          "level": 5
+        },
+        {
+          "id": "rx0mqbwsj1ctfawft1owhe4m",
+          "hidden": false,
+          "language": "German",
+          "fluency": "Conversational Only",
+          "level": 3
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "n3g8kcx7yqnnamzlsisre3j6",
+          "hidden": false,
+          "title": "Scrum Master",
+          "issuer": "",
+          "date": "",
+          "website": { "url": "", "label": "" },
+          "description": ""
+        },
+        {
+          "id": "yhho574tu4gghjlf2yqle7yf",
+          "hidden": false,
+          "title": "Prince 2",
+          "issuer": "",
+          "date": "",
+          "website": { "url": "", "label": "" },
+          "description": ""
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": [
+    {
+      "title": "Experience (Additional)",
+      "columns": 1,
+      "hidden": false,
+      "id": "019cb47d-e3d1-747f-a37e-381383ca89f0",
+      "type": "experience",
+      "items": [
+        {
+          "id": "wg9ruxrcier2tm6v8fb7zp2z",
+          "hidden": false,
+          "company": "Social Chicken",
+          "position": "Freelance Senior Project Manager & Educator",
+          "location": "Amsterdam, Netherlands",
+          "period": "2016 – 2022",
+          "website": { "url": "", "label": "" },
+          "description": "<ul><li><p>Ran delivery for small teams across cloud/BI/automation initiatives; structured work into clear increments and stakeholder check-ins.</p></li><li><p>Delivered training and onboarding that reduced confusion and improved adoption.</p></li></ul>"
+        },
+        {
+          "id": "hm5adaltjmoyr7w9pp36xb87",
+          "hidden": false,
+          "options": { "showLinkInTitle": false },
+          "company": "KONGSBERG",
+          "position": "Field Service Engineer & Data Quality Consultant",
+          "location": "Kristiansand, Norway",
+          "period": "2012",
+          "website": { "url": "https://kongsbergdigital.com/industry/oil-and-gas", "label": "" },
+          "description": "<ul><li><p>Delivered end-to-end implementations and user training across multiple sites; strong foundation in structured delivery and documentation.</p></li></ul>"
+        }
+      ]
+    },
+    {
+      "title": "Agile Methods & Tools",
+      "columns": 1,
+      "hidden": false,
+      "id": "019cb47e-571a-748b-9488-3d6b84a50a57",
+      "type": "experience",
+      "items": [
+        {
+          "id": "agilemethods1",
+          "hidden": false,
+          "company": "Methods",
+          "position": "Scrum / Agile",
+          "location": "",
+          "period": "",
+          "website": { "url": "", "label": "" },
+          "description": "<p>Scrum events facilitation • Backlog refinement support • Definition of Done • Working agreements • Retrospective systems • Flow/WIP awareness • Stakeholder workshops • Simulation-based agile training (SafeScrum)</p>"
+        },
+        {
+          "id": "agiletools1",
+          "hidden": false,
+          "company": "Tools",
+          "position": "Collaboration / Prototyping",
+          "location": "",
+          "period": "",
+          "website": { "url": "", "label": "" },
+          "description": "<p>Miro • Jira (conceptual) • Notion (conceptual) • GitHub • Docker-based tooling for prototypes • Workshop canvases and decision games</p>"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "template": "pikachu",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": ["profiles", "summary", "experience"],
+          "sidebar": ["skills", "languages", "publications", "interests"]
+        },
+        {
+          "fullWidth": false,
+          "main": ["019cb47d-e3d1-747f-a37e-381383ca89f0"],
+          "sidebar": []
+        },
+        {
+          "fullWidth": false,
+          "main": ["education", "references"],
+          "sidebar": ["certifications", "awards"]
+        },
+        {
+          "fullWidth": false,
+          "main": ["volunteer", "projects", "019cb47e-571a-748b-9488-3d6b84a50a57"],
+          "sidebar": []
+        }
+      ]
+    },
+    "css": { "enabled": false, "value": "" },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 14,
+      "marginY": 12,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": { "icon": "star", "type": "circle" },
+      "colors": {
+        "primary": "rgba(220, 38, 38, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": { "fontFamily": "IBM Plex Serif", "fontWeights": ["400", "500"], "fontSize": 10, "lineHeight": 1.5 },
+      "heading": { "fontFamily": "IBM Plex Serif", "fontWeights": ["600"], "fontSize": 14, "lineHeight": 1.5 }
+    },
+    "notes": ""
+  }
+}

@@ -1,0 +1,12 @@
+project:
+  type: default
+
+# Persoonlijk profiel automatisch beschikbaar in alle documenten
+metadata-files:
+  - profiel.yml
+
+# Gebruik het geïnstalleerde TeX Live — geen automatische pakketinstallatie
+format:
+  pdf:
+    latex-auto-install: false
+    latex-auto-mk: true
