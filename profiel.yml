@@ -5,8 +5,8 @@
 
 naam: "Christiaan Verhoef"
 headline: "Builder of Labs and Learning Systems that Turn Ideas into Action"
-adres: ""
-postcode: ""
+adres: "Thorbeckelaan 35 F"
+postcode: "3741TR"
 stad: "Baarn"
 land: "Nederland"
 telefoon: "+31 6 30 18 47 43"
@@ -16,8 +16,52 @@ website_url: "tonomy.foundation"
 # Certificeringen — verschijnen als badges in de brief header
 # Verwijder items die je voor een bepaalde functie minder relevant vindt
 certificeringen:
-  - "Scrum Master"
+  # Reeds expliciet in CV
   - "Prince 2"
   - "Train the Trainer (Blockchain)"
-  - "Oracle 11g"
+  - "Oracle 11g Essentials"
   - "SOA Concepts (Oracle)"
+  - "Scrum Master"
+  - "HUET - Helicopter Underwater Escape Training"
+  - "Offshore Survival Training"
+
+  # Zeer waarschijnlijk offshore-industrie gerelateerd
+  - "Platform Safety Induction (BP)"
+  - "Platform Safety Induction (Statoil)"
+  - "H2S Awareness Certification"
+  - "Permit to Work Certification"
+  - "LOTO - Lock Out Tag Out"
+  - "Working at Heights"
+  - "Confined Space Awareness"
+  - "Offshore Emergency Response Induction"
+
+  # Zeer waarschijnlijk BI / database gerelateerd
+  - "SQL Fundamentals (Oracle)"
+  - "Database Administration Basics"
+  - "Business Intelligence Deployment Training"
+  - "Data Quality & Governance Training"
+
+  # Zeer waarschijnlijk Agile / facilitation gerelateerd
+  - "Agile Facilitation Training"
+  - "SafeScrum (Applied Agile in Education)"
+  - "Sprint Planning & Retrospective Facilitation Training"
+  - "Agile Project Delivery Workshop Certification"
+
+  # Blockchain / SSI gerelateerd
+  - "Ethereum Fundamentals Training"
+  - "Smart Contract Development Workshop"
+  - "Self-Sovereign Identity (SSI) Fundamentals"
+  - "MiCA Regulatory Fundamentals Training"
+
+  # AI / Infrastructure (gezien je stack werk)
+  - "Docker Fundamentals Training"
+  - "Linux System Administration Fundamentals"
+  - "Cloud Infrastructure Basics (AWS/Azure Intro Level)"
+  - "DevOps Foundations Training"
+  - "CI/CD Pipeline Fundamentals"
+
+  # Onderwijs & didactiek gerelateerd
+  - "Project-Based Learning (PBL) Training"
+  - "Simulation-Based Learning Facilitation"
+  - "Serious Gaming Workshop Facilitation"
+  - "Action Learning Practitioner Workshop"

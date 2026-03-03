@@ -1,0 +1,38 @@
+---
+format:
+  pdf:
+    template: ../../_stijl/brief-modern.tex
+    pdf-engine: xelatex
+    output-file: "Motivatiebrief technovacollege.pdf"
+
+# ---- Vacature gegevens ----
+bedrijf: "Technova College"
+afdeling: "Team IT & Software Development"
+ter_attentie: "dhr. J. Bode en dhr. D. Hoogstrate"
+bedrijf_adres: "Zandlaan 29A"
+bedrijf_postcode: "6717 LN"
+bedrijf_stad: "Ede"
+
+functie: "Vakdocent IT & Software Development"
+datum: "3 maart 2026"
+aanhef: "Geachte heer Bode en heer Hoogstrate,"
+
+# Meest relevante certificeringen voor deze functie
+certificeringen:
+  - "PSM I, CSM, Scrum Master"
+  - "ICP-ACC: Agile Coaching"
+  - "BOSIET - Basic Offshore Safety Induction and Emergency Training"
+  - "HUET - Helicopter Underwater Escape Training"
+---
+
+Met veel interesse reageer ik op uw vacature voor de functie van **Vakdocent IT & Software Development**. De combinatie van praktijkgericht onderwijs, technologie en het begeleiden van jonge mensen richting vakmanschap spreekt mij sterk aan. In mijn loopbaan heb ik steeds gewerkt op het snijvlak van IT, onderwijs en praktijktoepassing, precies waar uw opleidingen voor staan.
+
+Mijn onderwijservaring begon bij programmeerlessen geven voor kinderen bij Fluxus en daarna ging al gouw naar het mbo bij ROC Midden Nederland, waar ik als freelance docent agile leren en digitale projecten introduceerde. In plaats van traditionele lessen ontwierp ik realistische projectomgevingen waarin studenten werkten als developers, projectleiders of ondernemers. Zij leerden documenteren, samenwerken, presenteren en verantwoordelijkheid nemen voor hun eigen product. Die aanpak sluit sterk aan bij het opleiden van beginnend professionals in opleidingen als Software Developer en ICT System Engineer.
+
+Bij Windesheim heb ik vervolgens innovatie- en AI-labs opgezet waarin studenten hands-on werken met open infrastructuur, automatisering en simulaties. Ik bouw niet alleen lesmateriaal, maar ook de technische omgeving waarin studenten veilig kunnen experimenteren. Daarbij zorg ik altijd dat complexe technologie begrijpelijk en toepasbaar wordt. Studenten hoeven bij mij geen theorie te reproduceren, maar leren systemen doorgronden door ze zelf te bouwen.
+
+Wat mij aanspreekt in uw visie is het opleiden tot praktijkgerichte en ondernemende vakhelden. Jongeren tussen 16 en 25 jaar vragen om duidelijke kaders, energie en oprechte betrokkenheid. Ik werk graag met deze doelgroep en zie het als mijn taak om hen niet alleen technisch sterker te maken, maar ook zelfvertrouwen en professionele houding mee te geven. Daarbij werk ik graag samen met bedrijven om projecten actueel en relevant te houden.
+
+Ik ben een teamspeler die onderwijs ziet als gezamenlijk ontwerp. Ik denk graag mee over curriculumontwikkeling, actualisering van lesmateriaal en het versterken van de verbinding tussen school en praktijk. Mocht het behalen van aanvullende onderwijsbevoegdheden gewenst zijn, dan ben ik bereid daarin te investeren.
+
+Graag licht ik mijn motivatie en ervaring toe in een persoonlijk gesprek of tijdens een gastles.
