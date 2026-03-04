@@ -1,0 +1,61 @@
+# ============================================================
+# Job Config Template — copy this for each application
+# ============================================================
+# All fields are optional. Omit what you don't need.
+# ============================================================
+
+# Rewrite the headline under your name
+headline: "Innovation Architect & Learning Systems Builder"
+
+# Rewrite the summary (plain text or HTML)
+# Separate paragraphs with a blank line
+summary: |
+  Systems thinker with a track record of building labs, tools, and programs
+  that translate complex ideas into real outcomes.
+
+  Experienced in agile facilitation, AI infrastructure, and cross-sector collaboration.
+
+# Show only these companies in the experience section (hides all others)
+# Comment out to show all experience
+# show_experience:
+#   - Windesheim University of Applied Sciences
+#   - Tonomy Foundation
+#   - Value Chain Hackers
+
+# Or: hide specific companies while showing the rest
+hide_experience:
+  - "KONGSBERG - Thesis"
+  - "Fluxus"
+  - "WDS Global"
+
+# Show only these projects (hides all others)
+# show_projects:
+#   - Value Chain Hackers
+#   - The beergame
+
+# Or: hide specific projects
+hide_projects:
+  - Farm Credibly
+  - ESIEA
+
+# Put these skills first (others follow in their original order)
+priority_skills:
+  - Lab and Program Development
+  - AI and Open Infrastructure
+  - Systems Thinking
+  - Agile Coaching & Facilitation
+
+# Hide skills that aren't relevant for this role
+hide_skills:
+  - Blockchain & Digital Identity
+
+# Override the certifications shown (leave out to use the ones from the base CV)
+# certifications:
+#   - Scrum Master
+#   - Prince 2
+#   - title: "Train the Trainer (Blockchain)"
+#     issuer: "Blockchain Workspace"
+#     date: "2020"
+
+# Reactive Resume template name (default: ditgar)
+# template: ditgar
