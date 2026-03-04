@@ -3,8 +3,8 @@
 % Encoding en fonts (xelatex)
 \usepackage{fontspec}
 
-% Pagina-indeling (DIN 5008 stijl marges)
-\usepackage[a4paper, top=2.7cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+% Pagina-indeling — vaste marges, altijd A4
+\usepackage[a4paper, top=2.2cm, bottom=2.2cm, left=2.5cm, right=2.5cm, nohead, nofoot]{geometry}
 
 % Links
 \usepackage[hidelinks]{hyperref}
@@ -16,9 +16,18 @@
 % Geen paginanummers
 \pagestyle{empty}
 
+% PDF metadata (titel = functie + bedrijf)
+\hypersetup{
+  pdftitle={Sollicitatie -- $functie$ -- $bedrijf$},
+  pdfauthor={$naam$}
+}
+
 % Instellingen
-\setlength{\parskip}{0.7em}
+\setlength{\parskip}{0.65em}
 \setlength{\parindent}{0pt}
+
+% Voorkom overflow bij lange woorden
+\sloppy
 
 % Pandoc lijsten fix
 \providecommand{\tightlist}{%
@@ -39,7 +48,7 @@ $if(telefoon)$$telefoon$\\$endif$%
 $if(website_url)$\href{https://$website_url$}{$website_url$}$endif$
 \end{flushright}
 
-\vspace{0.5cm}
+\vspace{0.4cm}
 
 % ================================================================
 % DATUM
@@ -48,7 +57,7 @@ $if(website_url)$\href{https://$website_url$}{$website_url$}$endif$
 $if(stad)$$stad$$endif$, $datum$
 \end{flushright}
 
-\vspace{1cm}
+\vspace{0.7cm}
 
 % ================================================================
 % GEADRESSEERDE
@@ -59,14 +68,14 @@ $if(ter_attentie)$T.a.v. $ter_attentie$\\$endif$%
 $if(bedrijf_adres)$$bedrijf_adres$\\$endif$%
 $if(bedrijf_postcode)$$bedrijf_postcode$ $endif$$if(bedrijf_stad)$$bedrijf_stad$$endif$
 
-\vspace{1cm}
+\vspace{0.7cm}
 
 % ================================================================
 % ONDERWERP
 % ================================================================
 \textbf{Betreft: Sollicitatie $functie$$if(referentie)$ \textnormal{(ref: $referentie$)}$endif$}
 
-\vspace{1cm}
+\vspace{0.7cm}
 
 % ================================================================
 % BRIEF INHOUD
@@ -77,11 +86,11 @@ $aanhef$
 
 $body$
 
-\vspace{1.5cm}
+\vspace{1.2cm}
 
 Met vriendelijke groet,
 
-\vspace{2.5cm}
+\vspace{2.0cm}
 
 \textbf{$naam$}
 
