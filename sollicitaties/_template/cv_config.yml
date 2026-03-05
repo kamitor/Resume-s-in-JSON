@@ -1,0 +1,52 @@
+# ============================================================
+# CV configuratie voor deze sollicitatie
+# Gebruik: python scripts/build_job.py sollicitaties/DEZE_MAP/
+# ============================================================
+# Alle velden zijn optioneel — laat weg wat je niet aanpast.
+# ============================================================
+
+# Aangepaste headline (laat leeg voor standaard uit profiel.yml)
+# headline: "Innovation Architect & Learning Systems Builder"
+
+# Herschreven samenvatting gericht op deze functie (plain tekst of HTML)
+# summary: |
+#   Eerste alinea over jezelf in relatie tot deze functie.
+#
+#   Tweede alinea over concrete resultaten.
+
+# Toon alleen deze werkgevers (verbergt de rest)
+# show_experience:
+#   - Windesheim University of Applied Sciences
+#   - Tonomy Foundation
+
+# Verberg specifieke werkgevers
+# hide_experience:
+#   - "KONGSBERG - Thesis"
+#   - Fluxus
+
+# Zet deze skills vooraan
+# priority_skills:
+#   - Lab and Program Development
+#   - AI and Open Infrastructure
+#   - Systems Thinking
+
+# Verberg irrelevante skills
+# hide_skills:
+#   - Blockchain & Digital Identity
+
+# Toon alleen deze projecten
+# show_projects:
+#   - Value Chain Hackers
+#   - The beergame
+
+# Verberg specifieke projecten
+# hide_projects:
+#   - Farm Credibly
+#   - ESIEA
+
+# Overschrijf certificeringen (standaard: alle bevestigde uit profiel.yml)
+# certifications:
+#   - Scrum Master
+#   - Prince 2
+#   - title: "Train the Trainer (Blockchain)"
+#     issuer: "Blockchain Workspace"

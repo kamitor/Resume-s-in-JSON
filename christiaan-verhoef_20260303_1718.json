@@ -743,18 +743,6 @@
           "description": ""
         },
         {
-          "id": "rzdyr8mykz87pewcjpglr9iw",
-          "hidden": false,
-          "title": "Train the trainer (blockchain)",
-          "issuer": "",
-          "date": "",
-          "website": {
-            "url": "",
-            "label": ""
-          },
-          "description": ""
-        },
-        {
           "id": "yhho574tu4gghjlf2yqle7yf",
           "hidden": false,
           "title": "Prince 2",
@@ -767,10 +755,10 @@
           "description": ""
         },
         {
-          "id": "tt952sba5p7sx3mmz91nmm27",
+          "id": "rzdyr8mykz87pewcjpglr9iw",
           "hidden": false,
-          "title": "Oracle 11g Essentials",
-          "issuer": "",
+          "title": "Train the Trainer (Blockchain)",
+          "issuer": "Blockchain Workspace",
           "date": "",
           "website": {
             "url": "",
@@ -779,11 +767,47 @@
           "description": ""
         },
         {
-          "id": "n3vuxd5w6de0yevq8occjt6o",
+          "id": "tt952sba5p7sx3mmz91nmm27",
           "hidden": false,
-          "title": "Service Oriented Architecture Concepts",
-          "issuer": "oracle",
+          "title": "Oracle 11g Essentials",
+          "issuer": "Oracle",
           "date": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "yh8jtuw71fruqiweheedm8r02",
+          "hidden": false,
+          "title": "SOA Concepts (Oracle)",
+          "issuer": "Oracle",
+          "date": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "evcglllw9tkefceyw7h5hj0p5",
+          "hidden": false,
+          "title": "HUET - Helicopter Underwater Escape Training",
+          "issuer": "",
+          "date": "2012",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "xnre4dkl8g9nlyb4m1562e9xj",
+          "hidden": false,
+          "title": "Offshore Survival Training",
+          "issuer": "",
+          "date": "2012",
           "website": {
             "url": "",
             "label": ""

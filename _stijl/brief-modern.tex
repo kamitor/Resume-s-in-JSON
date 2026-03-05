@@ -3,8 +3,8 @@
 % Encoding en fonts (xelatex)
 \usepackage{fontspec}
 
-% Pagina-indeling — smallere marges voor meer schrijfruimte
-\usepackage[a4paper, top=1.8cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+% Pagina-indeling — vaste marges, altijd A4
+\usepackage[a4paper, top=1.8cm, bottom=1.8cm, left=2.5cm, right=2.5cm, nohead, nofoot]{geometry}
 
 % Links en kleuren
 \usepackage[hidelinks]{hyperref}
@@ -20,18 +20,23 @@
 % Geen paginanummers
 \pagestyle{empty}
 
+% PDF metadata (titel = functie + bedrijf)
+\hypersetup{
+  pdftitle={Sollicitatie -- $functie$ -- $bedrijf$},
+  pdfauthor={$naam$}
+}
+
 % Kleur definitie — verander hier de accentkleur
 \definecolor{accent}{HTML}{1A5276}
 \definecolor{accentlight}{HTML}{D6EAF8}
 \definecolor{grijs}{HTML}{555555}
 
 % Alineaafstand (compact genoeg voor één pagina)
-\setlength{\parskip}{0.55em}
+\setlength{\parskip}{0.5em}
 \setlength{\parindent}{0pt}
 
-% Geen afbreekstreepjes
-\hyphenpenalty=10000
-\exhyphenpenalty=10000
+% Voorkom overflow bij lange woorden
+\sloppy
 
 % Pandoc lijsten fix
 \providecommand{\tightlist}{%
@@ -62,27 +67,28 @@ $if(stad)$\quad\textcolor{accent}{|}~\faMapMarker~$stad$$endif$%
 }
 
 $if(certificeringen)$
-\vspace{0.25em}
+\vspace{0.2em}
 
-{\footnotesize%
-$for(certificeringen)$\colorbox{accentlight}{\color{accent}\faCertificate~~$it$}~~$endfor$%
+% Badges op meerdere regels als ze niet passen
+{\footnotesize\setlength{\parskip}{3pt}%
+$for(certificeringen)$\colorbox{accentlight}{\color{accent}\faCertificate~$it$} $endfor$%
 }
 $endif$
 
-\vspace{0.25em}
+\vspace{0.2em}
 
 {\color{accent}\rule{\linewidth}{0.5pt}}
 
 % ================================================================
 % DATUM (rechts uitgelijnd)
 % ================================================================
-\vspace{0.35cm}
+\vspace{0.25cm}
 
 \begin{flushright}
 $if(stad)$$stad$, $endif$$datum$
 \end{flushright}
 
-\vspace{0.35cm}
+\vspace{0.25cm}
 
 % ================================================================
 % GEADRESSEERDE
@@ -93,29 +99,29 @@ $if(ter_attentie)$T.a.v. $ter_attentie$\\$endif$%
 $if(bedrijf_adres)$$bedrijf_adres$\\$endif$%
 $if(bedrijf_postcode)$$bedrijf_postcode$ $endif$$if(bedrijf_stad)$$bedrijf_stad$$endif$
 
-\vspace{0.6cm}
+\vspace{0.45cm}
 
 % ================================================================
 % ONDERWERP
 % ================================================================
 \textbf{Betreft: Sollicitatie $functie$$if(referentie)$ \textnormal{(ref: $referentie$)}$endif$}
 
-\vspace{0.6cm}
+\vspace{0.45cm}
 
 % ================================================================
 % BRIEF INHOUD
 % ================================================================
 $aanhef$
 
-\vspace{0.2em}
+\vspace{0.15em}
 
 $body$
 
-\vspace{0.5cm}
+\vspace{0.4cm}
 
 \noindent Met vriendelijke groet,
 
-\vspace{1.5cm}
+\vspace{1.2cm}
 
 \noindent\textbf{$naam$}
 

@@ -1,2 +1,6 @@
 /.quarto/
 **/*.quarto_ipynb
+__pycache__/
+*.pyc
+sollicitaties/**/cv.json
+sollicitaties/**/brief.pdf

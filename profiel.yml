@@ -13,19 +13,39 @@ telefoon: "+31 6 30 18 47 43"
 email: "christiaan_gerardo@hotmail.com"
 website_url: "tonomy.foundation"
 
-# Certificeringen — verschijnen als badges in de brief header
-# Verwijder items die je voor een bepaalde functie minder relevant vindt
-certificeringen:
-  # Reeds expliciet in CV
-  - "Prince 2"
-  - "Train the Trainer (Blockchain)"
-  - "Oracle 11g Essentials"
-  - "SOA Concepts (Oracle)"
-  - "Scrum Master"
-  - "HUET - Helicopter Underwater Escape Training"
-  - "Offshore Survival Training"
+# ============================================================
+# BEVESTIGDE certificeringen — expliciet in CV, worden gesyncet
+# naar het rxresume JSON via: python scripts/sync_certifications.py
+# ============================================================
+certificeringen_cv:
+  - title: "Scrum Master"
+    issuer: ""
+    date: ""
+  - title: "Prince 2"
+    issuer: ""
+    date: ""
+  - title: "Train the Trainer (Blockchain)"
+    issuer: "Blockchain Workspace"
+    date: ""
+  - title: "Oracle 11g Essentials"
+    issuer: "Oracle"
+    date: ""
+  - title: "SOA Concepts (Oracle)"
+    issuer: "Oracle"
+    date: ""
+  - title: "HUET - Helicopter Underwater Escape Training"
+    issuer: ""
+    date: "2012"
+  - title: "Offshore Survival Training"
+    issuer: ""
+    date: "2012"
 
-  # Zeer waarschijnlijk offshore-industrie gerelateerd
+# ============================================================
+# ONBEVESTIGD — waarschijnlijk behaald maar nog te verifiëren
+# Voeg toe aan certificeringen_cv nadat je dit hebt nagelopen
+# ============================================================
+certificeringen_onbevestigd:
+  # Offshore
   - "Platform Safety Induction (BP)"
   - "Platform Safety Induction (Statoil)"
   - "H2S Awareness Certification"
@@ -34,34 +54,40 @@ certificeringen:
   - "Working at Heights"
   - "Confined Space Awareness"
   - "Offshore Emergency Response Induction"
-
-  # Zeer waarschijnlijk BI / database gerelateerd
+  # BI / Database
   - "SQL Fundamentals (Oracle)"
   - "Database Administration Basics"
   - "Business Intelligence Deployment Training"
   - "Data Quality & Governance Training"
-
-  # Zeer waarschijnlijk Agile / facilitation gerelateerd
+  # Agile
   - "Agile Facilitation Training"
   - "SafeScrum (Applied Agile in Education)"
   - "Sprint Planning & Retrospective Facilitation Training"
   - "Agile Project Delivery Workshop Certification"
-
-  # Blockchain / SSI gerelateerd
+  # Blockchain / SSI
   - "Ethereum Fundamentals Training"
   - "Smart Contract Development Workshop"
   - "Self-Sovereign Identity (SSI) Fundamentals"
   - "MiCA Regulatory Fundamentals Training"
-
-  # AI / Infrastructure (gezien je stack werk)
+  # AI / Infrastructure
   - "Docker Fundamentals Training"
   - "Linux System Administration Fundamentals"
   - "Cloud Infrastructure Basics (AWS/Azure Intro Level)"
   - "DevOps Foundations Training"
   - "CI/CD Pipeline Fundamentals"
-
-  # Onderwijs & didactiek gerelateerd
+  # Onderwijs
   - "Project-Based Learning (PBL) Training"
   - "Simulation-Based Learning Facilitation"
   - "Serious Gaming Workshop Facilitation"
   - "Action Learning Practitioner Workshop"
+
+# ============================================================
+# BRIEF BADGES — verschijnen in de brief header
+# Korte selectie, pas per sollicitatie aan in brief.qmd
+# ============================================================
+certificeringen:
+  - "Scrum Master"
+  - "Prince 2"
+  - "Train the Trainer (Blockchain)"
+  - "Oracle 11g Essentials"
+  - "SOA Concepts (Oracle)"

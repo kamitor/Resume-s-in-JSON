@@ -1,0 +1,65 @@
+name: Render Letters
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sollicitaties/**/*.qmd"
+      - "_stijl/**"
+      - "profiel.yml"
+      - "_quarto.yml"
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install XeLaTeX + required packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex \
+            texlive-fonts-extra \
+            texlive-latex-extra \
+            texlive-plain-generic
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.6.39"
+
+      - name: Find and render all brief.qmd files
+        run: |
+          set -e
+          find sollicitaties -name "brief.qmd" | while read qmd; do
+            echo "Rendering: $qmd"
+            quarto render "$qmd"
+          done
+
+      - name: Verify PDFs were created
+        run: |
+          set -e
+          failed=0
+          find sollicitaties -name "brief.qmd" | while read qmd; do
+            pdf="${qmd%.qmd}.pdf"
+            # brief.qmd renders to brief.pdf in the same folder
+            dir=$(dirname "$qmd")
+            if [ ! -f "$dir/brief.pdf" ]; then
+              echo "MISSING PDF for: $qmd"
+              failed=1
+            else
+              echo "OK: $dir/brief.pdf"
+            fi
+          done
+          exit $failed
+
+      - name: Upload rendered letters
+        uses: actions/upload-artifact@v4
+        with:
+          name: sollicitatiebrieven
+          path: sollicitaties/**/brief.pdf
+          if-no-files-found: warn
