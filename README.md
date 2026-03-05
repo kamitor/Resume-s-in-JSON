@@ -154,7 +154,7 @@ Below is your original structure — expanded, clarified, and broken into smalle
 
 ---
 
-# Milestone 2 — rxresu.me (Correct Certifications)
+# Milestone 2 — rxresu.me (Correct Certifications)  (To be done by Chris Manually)
 
 ## 1. Sync Certifications from profile.yml
 
@@ -166,15 +166,7 @@ Below is your original structure — expanded, clarified, and broken into smalle
 ## 2. Update rxresume JSON
 
 - [ ] Map profile.yml certifications to rxresume schema
-- [ ] Ensure no manual edits required
-- [ ] Validate JSON structure
-- [ ] Confirm layout inside rxresu.me preview
 
-## 3. Edge Case Testing
-
-- [ ] Test with reordered certifications
-- [ ] Test with added new certification
-- [ ] Confirm nothing breaks formatting
 
 ---
 
