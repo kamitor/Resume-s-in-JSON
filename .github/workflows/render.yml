@@ -43,19 +43,15 @@ jobs:
       - name: Verify PDFs were created
         run: |
           set -e
-          failed=0
-          find sollicitaties -name "brief.qmd" | while read qmd; do
-            pdf="${qmd%.qmd}.pdf"
-            # brief.qmd renders to brief.pdf in the same folder
+          while IFS= read -r qmd; do
             dir=$(dirname "$qmd")
             if [ ! -f "$dir/brief.pdf" ]; then
               echo "MISSING PDF for: $qmd"
-              failed=1
+              exit 1
             else
               echo "OK: $dir/brief.pdf"
             fi
-          done
-          exit $failed
+          done < <(find sollicitaties -name "brief.qmd")
 
       - name: Upload rendered letters
         uses: actions/upload-artifact@v4
