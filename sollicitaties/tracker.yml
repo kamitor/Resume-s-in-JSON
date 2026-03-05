@@ -1,0 +1,13 @@
+# Sollicitatie Tracker
+# Statussen: concept | verstuurd | gesprek | aangeboden | afgewezen | geaccepteerd
+
+applications:
+  - id: 2026-03-03_voorbeeld_innovatiemanager
+    bedrijf: "Voorbeeld Hogeschool"
+    functie: "Innovatiemanager"
+    datum_gevonden: "2026-03-03"
+    datum_verstuurd: null
+    salaris_range: null
+    status: "concept"
+    gesprek_datum: null
+    notities: "Voorbeeldapplicatie — template sollicitatie"

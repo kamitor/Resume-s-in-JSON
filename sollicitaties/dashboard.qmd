@@ -1,0 +1,182 @@
+---
+title: "Sollicitatie Dashboard"
+format:
+  html:
+    embed-resources: true
+    theme: flatly
+    toc: false
+    page-layout: full
+execute:
+  echo: false
+  warning: false
+---
+
+```{python}
+from pathlib import Path
+import yaml
+import pandas as pd
+from datetime import date
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+from IPython.display import HTML
+
+# Load tracker data
+tracker_path = Path(__file__).parent / "tracker.yml" if "__file__" in dir() else Path("tracker.yml")
+with open(tracker_path) as f:
+    data = yaml.safe_load(f)
+
+apps = data.get("applications", [])
+df = pd.DataFrame(apps)
+
+# Normalize
+STATUS_ORDER = ["concept", "verstuurd", "gesprek", "aangeboden", "afgewezen", "geaccepteerd"]
+STATUS_COLORS = {
+    "concept":      "#94a3b8",
+    "verstuurd":    "#3b82f6",
+    "gesprek":      "#f59e0b",
+    "aangeboden":   "#8b5cf6",
+    "afgewezen":    "#ef4444",
+    "geaccepteerd": "#22c55e",
+}
+
+if not df.empty:
+    df["status"] = pd.Categorical(df["status"], categories=STATUS_ORDER, ordered=True)
+    df["datum_gevonden"] = pd.to_datetime(df["datum_gevonden"], errors="coerce")
+    df["datum_verstuurd"] = pd.to_datetime(df["datum_verstuurd"], errors="coerce")
+```
+
+```{python}
+# --- Header stats ---
+totaal = len(df)
+verstuurd = len(df[df["status"].isin(["verstuurd", "gesprek", "aangeboden", "geaccepteerd"])]) if not df.empty else 0
+gesprekken = len(df[df["status"].isin(["gesprek", "aangeboden", "geaccepteerd"])]) if not df.empty else 0
+aanbiedingen = len(df[df["status"].isin(["aangeboden", "geaccepteerd"])]) if not df.empty else 0
+
+stats_html = f"""
+<div style="display:flex;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;">
+  <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.2rem 2rem;text-align:center;min-width:110px;">
+    <div style="font-size:2rem;font-weight:700;color:#1e293b;">{totaal}</div>
+    <div style="color:#64748b;font-size:.9rem;">Totaal</div>
+  </div>
+  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:1.2rem 2rem;text-align:center;min-width:110px;">
+    <div style="font-size:2rem;font-weight:700;color:#3b82f6;">{verstuurd}</div>
+    <div style="color:#64748b;font-size:.9rem;">Verstuurd</div>
+  </div>
+  <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:1.2rem 2rem;text-align:center;min-width:110px;">
+    <div style="font-size:2rem;font-weight:700;color:#f59e0b;">{gesprekken}</div>
+    <div style="color:#64748b;font-size:.9rem;">Gesprekken</div>
+  </div>
+  <div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:8px;padding:1.2rem 2rem;text-align:center;min-width:110px;">
+    <div style="font-size:2rem;font-weight:700;color:#8b5cf6;">{aanbiedingen}</div>
+    <div style="color:#64748b;font-size:.9rem;">Aanbiedingen</div>
+  </div>
+</div>
+"""
+HTML(stats_html)
+```
+
+## Status Pipeline
+
+```{python}
+if df.empty:
+    print("Geen sollicitaties gevonden.")
+else:
+    counts = df["status"].value_counts().reindex(STATUS_ORDER, fill_value=0)
+
+    fig, ax = plt.subplots(figsize=(9, 2.8))
+    bars = ax.barh(
+        counts.index,
+        counts.values,
+        color=[STATUS_COLORS.get(s, "#94a3b8") for s in counts.index],
+        height=0.55,
+        edgecolor="white",
+    )
+    for bar, val in zip(bars, counts.values):
+        if val > 0:
+            ax.text(bar.get_width() + 0.05, bar.get_y() + bar.get_height() / 2,
+                    str(val), va="center", ha="left", fontsize=11, color="#334155")
+    ax.set_xlim(0, max(counts.values.max() + 1, 3))
+    ax.set_xlabel("Aantal sollicitaties", fontsize=10, color="#64748b")
+    ax.tick_params(axis="y", labelsize=11)
+    ax.tick_params(axis="x", labelsize=9, colors="#94a3b8")
+    ax.spines[["top", "right", "left"]].set_visible(False)
+    ax.xaxis.set_tick_params(length=0)
+    ax.set_facecolor("white")
+    fig.patch.set_facecolor("white")
+    plt.tight_layout()
+    plt.show()
+```
+
+## Overzicht
+
+```{python}
+if df.empty:
+    print("Geen sollicitaties gevonden.")
+else:
+    display_df = df[["datum_gevonden", "bedrijf", "functie", "salaris_range", "status", "gesprek_datum", "notities"]].copy()
+    display_df = display_df.sort_values("datum_gevonden", ascending=False)
+    display_df["datum_gevonden"] = display_df["datum_gevonden"].dt.strftime("%Y-%m-%d").fillna("—")
+    display_df["gesprek_datum"] = display_df["gesprek_datum"].dt.strftime("%Y-%m-%d") if "gesprek_datum" in display_df else "—"
+    display_df = display_df.fillna("—")
+    display_df.columns = ["Gevonden", "Bedrijf", "Functie", "Salaris", "Status", "Gesprek", "Notities"]
+
+    def color_status(val):
+        color = STATUS_COLORS.get(val, "#94a3b8")
+        return (
+            f'<span style="background:{color};color:white;padding:2px 8px;'
+            f'border-radius:12px;font-size:.82rem;white-space:nowrap;">{val}</span>'
+        )
+
+    rows_html = ""
+    for _, row in display_df.iterrows():
+        rows_html += "<tr>"
+        for col, val in row.items():
+            if col == "Status":
+                rows_html += f"<td>{color_status(val)}</td>"
+            else:
+                rows_html += f"<td style='font-size:.9rem;'>{val}</td>"
+        rows_html += "</tr>"
+
+    headers = "".join(f"<th style='text-align:left;padding:6px 12px;border-bottom:2px solid #e2e8f0;font-size:.85rem;color:#64748b;'>{h}</th>" for h in display_df.columns)
+
+    table_html = f"""
+<div style="overflow-x:auto;">
+<table style="width:100%;border-collapse:collapse;font-family:sans-serif;">
+  <thead><tr style="background:#f8fafc;">{headers}</tr></thead>
+  <tbody>
+    {rows_html}
+  </tbody>
+</table>
+</div>
+"""
+    HTML(table_html)
+```
+
+## Timeline
+
+```{python}
+sent = df[df["datum_verstuurd"].notna()].copy() if not df.empty else pd.DataFrame()
+
+if sent.empty:
+    print("Nog geen verstuurd brieven — timeline verschijnt zodra datum_verstuurd is ingevuld.")
+else:
+    sent = sent.sort_values("datum_verstuurd")
+    fig, ax = plt.subplots(figsize=(10, max(2, len(sent) * 0.6 + 1)))
+
+    for i, (_, row) in enumerate(sent.iterrows()):
+        color = STATUS_COLORS.get(row["status"], "#94a3b8")
+        ax.scatter(row["datum_verstuurd"], i, color=color, s=120, zorder=3)
+        ax.text(row["datum_verstuurd"], i + 0.15, f"{row['bedrijf']} — {row['functie']}",
+                va="bottom", ha="center", fontsize=9, color="#334155")
+
+    ax.set_yticks([])
+    ax.spines[["top", "right", "left"]].set_visible(False)
+    ax.set_xlabel("Verzenddatum", fontsize=10, color="#64748b")
+    ax.set_facecolor("white")
+    fig.patch.set_facecolor("white")
+    plt.tight_layout()
+    plt.show()
+```
+
+---
+*Gegenereerd op `{python} str(date.today())`*

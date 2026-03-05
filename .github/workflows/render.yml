@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "sollicitaties/**/*.qmd"
+      - "sollicitaties/tracker.yml"
       - "_stijl/**"
       - "profiel.yml"
       - "_quarto.yml"
@@ -17,6 +18,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install pyyaml pandas matplotlib
 
       - name: Install XeLaTeX + required packages
         run: |
@@ -53,9 +62,19 @@ jobs:
             fi
           done < <(find sollicitaties -name "brief.qmd")
 
+      - name: Render dashboard
+        run: quarto render sollicitaties/dashboard.qmd
+
       - name: Upload rendered letters
         uses: actions/upload-artifact@v4
         with:
           name: sollicitatiebrieven
           path: sollicitaties/**/brief.pdf
+          if-no-files-found: warn
+
+      - name: Upload dashboard
+        uses: actions/upload-artifact@v4
+        with:
+          name: sollicitatie-dashboard
+          path: sollicitaties/dashboard.html
           if-no-files-found: warn
