@@ -1,0 +1,140 @@
+---
+title: "Career Document — Christiaan Verhoef"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    embed-resources: true
+  pdf:
+    geometry: margin=2cm
+    fontsize: 11pt
+---
+
+<!-- ============================================================
+     CAREER DOCUMENT — for Claude to use as context
+     Fill in each section. This feeds into CV tailoring and
+     cover letter writing. Keep it honest and specific.
+     ============================================================ -->
+
+# Identity Statement
+
+<!-- 2-3 sentences: who you are, what you uniquely do, what drives you -->
+
+> *TODO: Write your identity statement here.*
+
+---
+
+# Signature Capabilities
+
+<!-- What you do that others can't easily replicate. Be specific. -->
+
+1. **TODO** — e.g. "Turning a blank room into a functioning lab with 20 students in 3 weeks"
+2.
+3.
+4.
+5.
+
+---
+
+# Career Tracks
+
+<!-- Which directions genuinely interest you? Rank if possible. -->
+
+| Track | Interest (1-5) | Current Fit | Notes |
+|---|---|---|---|
+| Innovation Lab Director | | | |
+| Learning Systems / EdTech | | | |
+| Blockchain / SSI Ecosystem | | | |
+| AI Product / Infrastructure | | | |
+| Other: | | | |
+
+---
+
+# Work History — Pattern Analysis
+
+<!-- Fill in for each major role: what you actually built, what you're proud of,
+     what you'd do differently. Claude uses this to generate compelling bullet points. -->
+
+## Windesheim University of Applied Sciences
+- **Role:** TODO
+- **Built:** TODO
+- **Proud of:** TODO
+- **Would do differently:** TODO
+
+## Tonomy Foundation
+- **Role:** TODO
+- **Built:** TODO
+- **Proud of:** TODO
+
+## KONGSBERG — Thesis
+- **Role:** TODO
+- **Built:** TODO
+
+## Fluxus / Earlier roles
+- **Notes:** TODO
+
+---
+
+# SWOT Analysis
+
+## Strengths (as ENFP-T)
+- High-energy connector of ideas and people
+- Systems thinking: sees patterns across domains
+- TODO: add your own
+
+## Weaknesses
+- TODO: be honest — what derails you?
+
+## Opportunities
+- TODO: what's emerging in your field?
+
+## Threats
+- TODO: what could work against you?
+
+---
+
+# Roles to Avoid
+
+<!-- Be honest. What drains you or has historically failed? -->
+
+- Purely operational / process-execution roles with no creative mandate
+- TODO: add more
+
+---
+
+# Flagship Projects (for portfolio)
+
+<!-- 5 projects with impact. Used for Milestone 6 (portfolio). -->
+
+## 1. TODO: Project Name
+- **Problem:**
+- **What I built:**
+- **Impact / outcome:**
+- **Links:**
+
+## 2. TODO
+## 3. TODO
+## 4. TODO
+## 5. TODO
+
+---
+
+# Preferred Working Conditions
+
+| Factor | Preference |
+|---|---|
+| Team size | |
+| Remote / hybrid / onsite | |
+| Organisation size | |
+| Sector | |
+| Salary range | |
+| Languages | NL + EN |
+
+---
+
+# Notes for Claude
+
+<!-- Anything Claude should know when writing letters or tailoring CVs -->
+
+- TODO

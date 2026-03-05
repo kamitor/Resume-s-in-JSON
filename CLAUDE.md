@@ -30,6 +30,39 @@ Resume-s-in-JSON/
 
 ---
 
+## rxresume — CV Builder Stack
+
+Running locally via Podman (rootless). Docker CE is installed but NOT used (iptables/nftables conflict on Fedora).
+
+```bash
+# Start the stack
+./rxresume.sh up
+
+# Stop
+./rxresume.sh down
+
+# Check status
+./rxresume.sh status
+```
+
+UI: http://localhost:3000
+Import `christiaan-verhoef_20260303_1718.json` to load the base CV.
+`DOCKER_HOST=unix:///run/user/1000/podman/podman.sock` is set in `~/.bashrc`.
+
+**CV pipeline (do not edit JSON manually):**
+```bash
+# New application
+python scripts/new_job.py 2026-04-01_bedrijf_functie
+
+# Build (generate cv.json + render brief.pdf)
+python scripts/build_job.py sollicitaties/2026-04-01_bedrijf_functie/
+
+# Sync certifications after changing profiel.yml
+python scripts/sync_certifications.py [--dry-run]
+```
+
+---
+
 ## How to Start a New Application
 
 1. Copy the template folder:
@@ -71,24 +104,27 @@ Resume-s-in-JSON/
 
 ## Active Milestones
 
-### Milestone 1 — First Acceptable Results (current priority)
-- [ ] Letter template always renders on exactly 1 page (A4, locked margins, font, line height)
-- [ ] Multiple certifications don't overflow — compact bullet list, no page break inside block
-- [ ] Document title = `Sollicitatie – <Role> – <Organisation>` (dynamically injected)
-- [ ] GitHub Actions workflow: install Quarto + XeLaTeX, render, validate, upload PDF/JSON artifacts
+### Milestone 1 — First Acceptable Results ✅ DONE
+- [x] Letter template always renders on exactly 1 page (A4, locked margins, font, line height)
+- [x] Multiple certifications don't overflow — compact bullet list, no page break inside block
+- [x] Document title = `Sollicitatie – <Role> – <Organisation>` (dynamically injected)
+- [x] GitHub Actions workflow: install Quarto + XeLaTeX, render, validate, upload PDF/JSON artifacts
 
-### Milestone 2 — Correct Certifications in rxresu.me
-- [ ] Audit and normalize certifications in `profiel.yml`
-- [ ] Map to rxresume JSON schema without manual edits
+### Milestone 2 — Correct Certifications in rxresu.me ✅ DONE (pending verification)
+- [x] Audit and normalize certifications in `profiel.yml` — split into confirmed/unconfirmed/brief-badges
+- [x] Map to rxresume JSON schema without manual edits (`sync_certifications.py`)
+- [ ] Verify ~28 unconfirmed certs in `certificeringen_onbevestigd` and promote to `certificeringen_cv`
 
 ### Milestone 3 — Career Document for Chris
 - [ ] `/career/career.qmd` with identity statement, career tracks, SWOT, ENFP-T strengths
 - [ ] Deep research extraction: patterns from past CVs, signature capabilities, roles to avoid
 
-### Milestone 4 — Job-Specific CV Generation
-- [ ] Per-job config file (role, org, emphasis tags, tone)
-- [ ] Script filters/reorders projects, certifications, and skills per job
-- [ ] Outputs: CV PDF, letter PDF, JSON
+### Milestone 4 — Job-Specific CV Generation ✅ DONE
+- [x] Per-job config file (cv_config.yml per sollicitatie folder)
+- [x] `generate_cv.py` filters/reorders projects, certifications, and skills per job
+- [x] `validate_cv.py` validates rxresume JSON schema before import
+- [x] `build_job.py` runs full pipeline: config → cv.json → validate → quarto render
+- [x] `new_job.py` creates new application folder from template
 
 ### Milestone 5 — Application Dashboard
 - [ ] Google Sheets tracking: vacancy, org, salary, dates, stage, outcome, CV/letter versions used
