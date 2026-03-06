@@ -1,4 +1,4 @@
-name: Test Dashboard
+name: Tests
 
 on:
   push:
@@ -6,15 +6,15 @@ on:
     paths:
       - "sollicitaties/dashboard.qmd"
       - "sollicitaties/tracker.yml"
-      - "scripts/test_tracker.py"
-      - "scripts/new_job.py"
+      - "profiel.yml"
+      - "scripts/**"
       - ".github/workflows/test.yml"
   pull_request:
     paths:
       - "sollicitaties/dashboard.qmd"
       - "sollicitaties/tracker.yml"
-      - "scripts/test_tracker.py"
-      - "scripts/new_job.py"
+      - "profiel.yml"
+      - "scripts/**"
   workflow_dispatch:
 
 jobs:
@@ -38,10 +38,60 @@ jobs:
         with:
           version: "1.6.39"
 
-      # ── Unit tests ────────────────────────────────────────────────────────
+      # ── Static validation ─────────────────────────────────────────────────
+
+      - name: Validate profiel.yml
+        run: python scripts/validate_profiel.py
 
       - name: Validate tracker.yml schema
         run: python scripts/test_tracker.py
+
+      - name: Check consistency (tracker vs folders)
+        run: python scripts/check_consistency.py
+
+      - name: Check application folders for required files
+        run: |
+          set -e
+          MISSING=0
+          for dir in sollicitaties/*/; do
+            name=$(basename "$dir")
+            [ "$name" = "_template" ] && continue
+            for f in brief.qmd vacature.md; do
+              if [ ! -f "$dir$f" ]; then
+                echo "MISSING $f in $dir"
+                MISSING=$((MISSING + 1))
+              fi
+            done
+          done
+          if [ "$MISSING" -gt 0 ]; then
+            echo "FAIL: $MISSING required file(s) missing"
+            exit 1
+          fi
+          echo "OK: all application folders have required files"
+
+      # ── Integration: status.py ────────────────────────────────────────────
+
+      - name: Test status.py --list runs without error
+        run: python scripts/status.py --list
+
+      - name: Test status.py update and revert
+        run: |
+          set -e
+          ID="2026-03-03_voorbeeld_innovatiemanager"
+
+          python scripts/status.py "$ID" verstuurd --datum 2099-01-01 --notities "CI test"
+          python - <<'PY'
+          import yaml, sys
+          with open("sollicitaties/tracker.yml") as f:
+              data = yaml.safe_load(f)
+          entry = next(a for a in data["applications"] if a["id"] == "2026-03-03_voorbeeld_innovatiemanager")
+          assert entry["status"] == "verstuurd", f"Expected verstuurd, got {entry['status']}"
+          assert entry["datum_verstuurd"] == "2099-01-01", f"Wrong date: {entry['datum_verstuurd']}"
+          print("OK: status and date updated correctly")
+          PY
+
+          # Revert so tracker stays clean
+          python scripts/status.py "$ID" concept
 
       # ── Integration: new_job.py ───────────────────────────────────────────
 
@@ -51,33 +101,27 @@ jobs:
           TEST_ID="2099-01-01_testbedrijf_testfunctie"
           python scripts/new_job.py "$TEST_ID"
 
-          # folder created
           test -d "sollicitaties/$TEST_ID" || { echo "FAIL: folder not created"; exit 1; }
           echo "OK: folder created"
 
-          # tracker entry added
-          python - <<'PY'
-          import yaml, sys
-          with open("sollicitaties/tracker.yml") as f:
-              data = yaml.safe_load(f)
-          ids = [a["id"] for a in data["applications"]]
-          if "2099-01-01_testbedrijf_testfunctie" not in ids:
-              print("FAIL: tracker.yml entry not added by new_job.py")
-              sys.exit(1)
-          print("OK: tracker entry found")
-          PY
-
-          # status must be 'concept'
           python - <<'PY'
           import yaml, sys
           with open("sollicitaties/tracker.yml") as f:
               data = yaml.safe_load(f)
           entry = next((a for a in data["applications"] if a["id"] == "2099-01-01_testbedrijf_testfunctie"), None)
-          if entry["status"] != "concept":
-              print(f"FAIL: expected status 'concept', got '{entry['status']}'")
+          if entry is None:
+              print("FAIL: tracker entry not added")
               sys.exit(1)
-          print("OK: status is 'concept'")
+          if entry["status"] != "concept":
+              print(f"FAIL: expected concept, got {entry['status']}")
+              sys.exit(1)
+          print("OK: tracker entry is concept")
           PY
+
+      # ── Integration: check_consistency after new_job.py ──────────────────
+
+      - name: check_consistency passes after new_job.py ran
+        run: python scripts/check_consistency.py
 
       # ── Integration: dashboard render ─────────────────────────────────────
 
@@ -85,15 +129,21 @@ jobs:
         working-directory: sollicitaties
         run: quarto render dashboard.qmd
 
-      - name: Verify dashboard.html was created
+      - name: Verify dashboard.html was created and is non-empty
         run: |
+          set -e
           if [ ! -f sollicitaties/dashboard.html ]; then
-            echo "FAIL: dashboard.html not found after render"
+            echo "FAIL: dashboard.html not found"
             exit 1
           fi
-          echo "OK: dashboard.html exists ($(wc -c < sollicitaties/dashboard.html) bytes)"
+          SIZE=$(wc -c < sollicitaties/dashboard.html)
+          if [ "$SIZE" -lt 10000 ]; then
+            echo "FAIL: dashboard.html is suspiciously small ($SIZE bytes)"
+            exit 1
+          fi
+          echo "OK: dashboard.html exists ($SIZE bytes)"
 
-      # ── Re-validate tracker after new_job.py modified it ─────────────────
+      # ── Final re-validation ───────────────────────────────────────────────
 
-      - name: Re-validate tracker.yml after new_job.py ran
+      - name: Final tracker.yml validation
         run: python scripts/test_tracker.py
