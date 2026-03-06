@@ -1,0 +1,99 @@
+name: Test Dashboard
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "sollicitaties/dashboard.qmd"
+      - "sollicitaties/tracker.yml"
+      - "scripts/test_tracker.py"
+      - "scripts/new_job.py"
+      - ".github/workflows/test.yml"
+  pull_request:
+    paths:
+      - "sollicitaties/dashboard.qmd"
+      - "sollicitaties/tracker.yml"
+      - "scripts/test_tracker.py"
+      - "scripts/new_job.py"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install pyyaml pandas matplotlib
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.6.39"
+
+      # ── Unit tests ────────────────────────────────────────────────────────
+
+      - name: Validate tracker.yml schema
+        run: python scripts/test_tracker.py
+
+      # ── Integration: new_job.py ───────────────────────────────────────────
+
+      - name: Test new_job.py creates folder and seeds tracker
+        run: |
+          set -e
+          TEST_ID="2099-01-01_testbedrijf_testfunctie"
+          python scripts/new_job.py "$TEST_ID"
+
+          # folder created
+          test -d "sollicitaties/$TEST_ID" || { echo "FAIL: folder not created"; exit 1; }
+          echo "OK: folder created"
+
+          # tracker entry added
+          python - <<'PY'
+          import yaml, sys
+          with open("sollicitaties/tracker.yml") as f:
+              data = yaml.safe_load(f)
+          ids = [a["id"] for a in data["applications"]]
+          if "2099-01-01_testbedrijf_testfunctie" not in ids:
+              print("FAIL: tracker.yml entry not added by new_job.py")
+              sys.exit(1)
+          print("OK: tracker entry found")
+          PY
+
+          # status must be 'concept'
+          python - <<'PY'
+          import yaml, sys
+          with open("sollicitaties/tracker.yml") as f:
+              data = yaml.safe_load(f)
+          entry = next((a for a in data["applications"] if a["id"] == "2099-01-01_testbedrijf_testfunctie"), None)
+          if entry["status"] != "concept":
+              print(f"FAIL: expected status 'concept', got '{entry['status']}'")
+              sys.exit(1)
+          print("OK: status is 'concept'")
+          PY
+
+      # ── Integration: dashboard render ─────────────────────────────────────
+
+      - name: Render dashboard.qmd
+        working-directory: sollicitaties
+        run: quarto render dashboard.qmd
+
+      - name: Verify dashboard.html was created
+        run: |
+          if [ ! -f sollicitaties/dashboard.html ]; then
+            echo "FAIL: dashboard.html not found after render"
+            exit 1
+          fi
+          echo "OK: dashboard.html exists ($(wc -c < sollicitaties/dashboard.html) bytes)"
+
+      # ── Re-validate tracker after new_job.py modified it ─────────────────
+
+      - name: Re-validate tracker.yml after new_job.py ran
+        run: python scripts/test_tracker.py
