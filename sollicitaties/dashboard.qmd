@@ -43,6 +43,7 @@ if not df.empty:
     df["status"] = pd.Categorical(df["status"], categories=STATUS_ORDER, ordered=True)
     df["datum_gevonden"] = pd.to_datetime(df["datum_gevonden"], errors="coerce")
     df["datum_verstuurd"] = pd.to_datetime(df["datum_verstuurd"], errors="coerce")
+    df["gesprek_datum"] = pd.to_datetime(df["gesprek_datum"], errors="coerce")
 ```
 
 ```{python}
@@ -116,7 +117,8 @@ else:
     display_df = df[["datum_gevonden", "bedrijf", "functie", "salaris_range", "status", "gesprek_datum", "notities"]].copy()
     display_df = display_df.sort_values("datum_gevonden", ascending=False)
     display_df["datum_gevonden"] = display_df["datum_gevonden"].dt.strftime("%Y-%m-%d").fillna("—")
-    display_df["gesprek_datum"] = display_df["gesprek_datum"].dt.strftime("%Y-%m-%d") if "gesprek_datum" in display_df else "—"
+    display_df["gesprek_datum"] = display_df["gesprek_datum"].dt.strftime("%Y-%m-%d").fillna("—")
+    display_df["status"] = display_df["status"].astype(str)
     display_df = display_df.fillna("—")
     display_df.columns = ["Gevonden", "Bedrijf", "Functie", "Salaris", "Status", "Gesprek", "Notities"]
 
