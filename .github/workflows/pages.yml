@@ -35,7 +35,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install Python dependencies
-        run: pip install pyyaml pandas matplotlib
+        run: pip install pyyaml pandas matplotlib nbformat
 
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
